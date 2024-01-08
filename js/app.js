@@ -160,3 +160,23 @@ owlNews.owlCarousel({
         }
     }
 });
+
+
+var owlWeapon = $('.owl-weapon');
+owlWeapon.owlCarousel({
+    navigation: false,
+    nav: false,
+    dots: false,
+    autoWidth: false,
+    loop: false,
+    responsiveClass: true,
+    margin: 0,
+    items: 1,
+    animateIn: 'ease-in-out',
+    animateOut: 'ease-in-out',
+    responsive: {
+        992: {
+            items: 3,
+        }
+    }
+});
