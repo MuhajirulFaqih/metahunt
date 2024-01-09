@@ -51,6 +51,7 @@ button, input {
 .nav-menu-content ul {
     list-style: none;
     margin-bottom: 0;
+    padding-left: 0;
 }
 .nav-menu-content ul li {
     display: inline-block;
@@ -131,6 +132,7 @@ button, input {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
 }
 #heroSlide .carousel-indicators [data-bs-target] {
     width: 10px;
@@ -366,9 +368,14 @@ button, input {
 .leaderboard-tab.nav-pills {
     gap: 6px;
     align-self: stretch;
+    justify-content: center;
+}
+.leaderboard-tab.nav-pills .nav-item {
+    flex: 1 0 0;
 }
 .leaderboard-tab.nav-pills .nav-link {
-    padding: 8px 16px;
+    padding: 8px 0px;
+    width: 100%;
     color: #FFFFFF;
     font-size: 14px;
     line-height: 21px;
@@ -680,10 +687,10 @@ button, input {
     display: block;
 }
 .footer-form input {
-    border-radius: 6px 0px 0px 6px;
+    border-radius: 6px;
     border: 1px solid #382F50;
     background: none;
-    padding: 12px 146px 12px 24px;
+    padding: 12px 146px 11px 24px;
     color: #FFFFFF;
     width: 100%;
 }

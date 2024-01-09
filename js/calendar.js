@@ -8,11 +8,11 @@ var eventDetails = [
 ];
 
 // Display the calendar for 3 consecutive months
-showCalendar(currentDate.getFullYear(), currentDate.getMonth() - 1);
-showCalendar(currentDate.getFullYear(), currentDate.getMonth());
-showCalendar(currentDate.getFullYear(), currentDate.getMonth() + 1);
+showCalendar(currentDate.getFullYear(), currentDate.getMonth() - 1, "calendar-1");
+showCalendar(currentDate.getFullYear(), currentDate.getMonth(), "calendar-2");
+showCalendar(currentDate.getFullYear(), currentDate.getMonth() + 1, "calendar-3");
 
-function showCalendar(year, month) {
+function showCalendar(year, month, idName) {
   var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
   // Ensure that month index is within the valid range
@@ -70,7 +70,7 @@ function showCalendar(year, month) {
   calendarHtml += '</tr></tbody></table></div>';
 
   // Display the calendar in the div with id "calendar"
-  $('#calendar').append(calendarHtml);
+  $(`#${idName}`).append(calendarHtml);
 }
 
 // Function to format date as YYYY-MM-DD
@@ -98,3 +98,25 @@ function handleDateClick(cell, year, month, day) {
 function resetText () {
     $(".calendar-text").html("")
 }
+
+// Initialize Owl Carousel
+$('.owl-calendar').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  dots: false,
+  loop: false,
+  navText: ["<div class='arrow'><img src='assets/icons/arrow-left.svg' class='w-100'></div>", "<div class='arrow'><img src='assets/icons/arrow-right.svg' class='w-100'></div>"],
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 2
+    },
+    1000: {
+      items: 3,
+      nav: false
+    }
+  }
+});

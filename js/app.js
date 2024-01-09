@@ -101,38 +101,42 @@ owlSurvival.owlCarousel({
     loop: true,
     center: true,
     responsiveClass: true,
-    margin: 0,
     items: 1,
+    stagePadding: 80,
     autoplayTimeout: 3000,
     autoplay: true,
     autoplayHoverPause: true,
     navText: ["<div class='arrow'><img src='assets/icons/arrow-left.svg' class='w-100'></div>", "<div class='arrow'><img src='assets/icons/arrow-right.svg' class='w-100'></div>"],
-    animateIn: 'ease-in-out',
-    animateOut: 'ease-in-out',
     responsive: {
         992: {
+            stagePadding: 0,
             items: 3,
-        }
+        },
+        600: {
+            stagePadding: 0,
+            items: 3,
+        },
     }
 });
 
 
 var owlLeaderboard = $('.owl-leaderboard');
 owlLeaderboard.owlCarousel({
-    navigation: false,
-    nav: false,
+    navigation: true,
+    startPosition: 0,
+    nav: true,
     dots: false,
     autoWidth: false,
-    loop: false,
-    responsiveClass: true,
+    loop: true,
+    responsiveClass: false,
     margin: 0,
+    center: true,
     items: 1,
-    animateIn: 'ease-in-out',
-    animateOut: 'ease-in-out',
+    navText: ["<div class='arrow'><img src='assets/icons/arrow-left.svg' class='w-100'></div>", "<div class='arrow'><img src='assets/icons/arrow-right.svg' class='w-100'></div>"],
     responsive: {
         992: {
             items: 3,
-        }
+        },
     }
 });
 
@@ -148,16 +152,21 @@ owlNews.owlCarousel({
     responsiveClass: true,
     margin: 0,
     items: 1,
+    stagePadding: 40,
     autoplayTimeout: 3000,
     autoplay: true,
     autoplayHoverPause: true,
     navText: ["<div class='arrow'><img src='assets/icons/arrow-left.svg' class='w-100'></div>", "<div class='arrow'><img src='assets/icons/arrow-right.svg' class='w-100'></div>"],
-    animateIn: 'ease-in-out',
-    animateOut: 'ease-in-out',
     responsive: {
+        600: {
+            items: 2,
+            center: false,
+            stagePadding: 0,
+        },
         992: {
             items: 3,
-        }
+            stagePadding: 0,
+        },
     }
 });
 
@@ -165,18 +174,27 @@ owlNews.owlCarousel({
 var owlWeapon = $('.owl-weapon');
 owlWeapon.owlCarousel({
     navigation: false,
-    nav: false,
+    nav: true,
     dots: false,
     autoWidth: false,
     loop: false,
     responsiveClass: true,
     margin: 0,
     items: 1,
-    animateIn: 'ease-in-out',
-    animateOut: 'ease-in-out',
+    navText: ["<div class='arrow'><img src='assets/icons/arrow-left.svg' class='w-100'></div>", "<div class='arrow'><img src='assets/icons/arrow-right.svg' class='w-100'></div>"],
     responsive: {
+        600: {
+            items: 2,
+            center: false,
+            stagePadding: 0,
+            nav: false,
+            navText: false,
+        },
         992: {
             items: 3,
-        }
+            stagePadding: 0,
+            nav: false,
+            navText: false,
+        },
     }
 });
