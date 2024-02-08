@@ -2,6 +2,19 @@
     .container {
         max-width: 1140px;
     }
+    .hero-slider-img > img {
+        width: 100%;
+        height: auto;
+    }
+    .hero-image-title {
+        width: 250px;
+    }
+    h1.hero-title {
+        font-size: 32px;
+    }
+    h2.hero-title {
+        font-size: 24px;
+    }
     .desc {
         font-size: 16px;
         line-height: 24px;
@@ -45,10 +58,6 @@
 @media (max-width: 1199.98px){
     .container {
         max-width: 960px;
-    }
-    .hero-slider-img img {
-        height: 100vh;
-        width: auto;
     }
     .nav-menu {
         margin: 16px 0;
@@ -102,6 +111,23 @@
 @media (max-width: 991.98px) {
     .container {
         max-width: 720px;
+    }
+    .hero-content {
+        align-items: start;
+        padding-top: 96px;
+    }
+    .hero-slider-img > img {
+        width: auto;
+        height: 100vh;
+    }
+    .hero-image-title {
+        width: 200px;
+    }
+    h1.hero-title {
+        font-size: 24px;
+    }
+    h2.hero-title {
+        font-size: 20px;
     }
     .close-icon, .toggle-icon {
         width: 24px;
@@ -169,12 +195,7 @@
         z-index: 8;
     }
     .owl-survival-text {
-        width: 360px;
-        position: absolute;
-        top: 100%;
-        padding-top: 24px;
-        left: 50%;
-        transform: translateX(-50%);
+        padding: 16px 0px;
     }
     .owl-survival .owl-item.active.center .owl-survival-item-image {
         height: 150px;
@@ -207,6 +228,14 @@
 @media (max-width: 575.98px) {
     .container {
         padding: 0 24px;
+    }
+    .hero-image-title {
+        width: auto;
+        height: 120px;
+    }
+    .hero-image-title > img {
+        width: auto;
+        height: 100%;
     }
     #survive {
         padding: 72px 0 104px;
@@ -251,7 +280,7 @@
         padding: 24px 0;
     }
     .owl-survival .owl-stage-outer {
-        padding: 40px 0 160px;
+        padding: 40px 0 64px;
     }
     .owl-survival .owl-survival-item-image {
         height: 170px;

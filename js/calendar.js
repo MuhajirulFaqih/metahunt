@@ -3,14 +3,17 @@ var currentDate = new Date();
 
 // List of event dates and names (assumed format: YYYY-MM-DD)
 var eventDetails = [
-  { date: '2023-12-20', name: 'Event 1', location: '' },
-  { date: '2023-12-30', name: 'Event 2', location: '' },
+  { date: '2024-01-01', name: 'Event 1', location: '' },
+  { date: '2024-01-30', name: 'Event 2', location: '' },
 ];
 
 // Display the calendar for 3 consecutive months
-showCalendar(currentDate.getFullYear(), currentDate.getMonth() - 1, "calendar-1");
-showCalendar(currentDate.getFullYear(), currentDate.getMonth(), "calendar-2");
-showCalendar(currentDate.getFullYear(), currentDate.getMonth() + 1, "calendar-3");
+// showCalendar(currentDate.getFullYear(), currentDate.getMonth() - 1, "calendar-1");
+// showCalendar(currentDate.getFullYear(), currentDate.getMonth() + 1, "calendar-2");
+// showCalendar(currentDate.getFullYear(), currentDate.getMonth() + 1, "calendar-3");
+for (var j = 0; j < 12; j++) {
+  showCalendar(currentDate.getFullYear(), j, `calendar-${j+1}`);
+}
 
 function showCalendar(year, month, idName) {
   var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -116,7 +119,6 @@ $('.owl-calendar').owlCarousel({
     },
     1000: {
       items: 3,
-      nav: false
     }
   }
 });

@@ -104,7 +104,7 @@ owlSurvival.owlCarousel({
     items: 1,
     stagePadding: 80,
     autoplayTimeout: 3000,
-    autoplay: true,
+    autoplay: false,
     autoplayHoverPause: true,
     navText: ["<div class='arrow'><img src='assets/icons/arrow-left.svg' class='w-100'></div>", "<div class='arrow'><img src='assets/icons/arrow-right.svg' class='w-100'></div>"],
     responsive: {
@@ -116,8 +116,16 @@ owlSurvival.owlCarousel({
             stagePadding: 0,
             items: 3,
         },
-    }
+    },
+    onRefreshed: survivalCallback,
+    onTranslated: survivalCallback
 });
+// Listen to owl events:
+function survivalCallback (event) {
+    var centerElement = $(event.target).find(".owl-item.center.active").html()
+    $(".survival-slider-text").html($(centerElement).find(".owl-survival-text"))
+    $(".survival-slider-text > div").addClass("d-inline-block")
+}
 
 
 var owlLeaderboard = $('.owl-leaderboard');
@@ -179,7 +187,7 @@ owlWeapon.owlCarousel({
     autoWidth: false,
     loop: false,
     responsiveClass: true,
-    margin: 0,
+    margin: 16,
     items: 1,
     navText: ["<div class='arrow'><img src='assets/icons/arrow-left.svg' class='w-100'></div>", "<div class='arrow'><img src='assets/icons/arrow-right.svg' class='w-100'></div>"],
     responsive: {
@@ -191,7 +199,7 @@ owlWeapon.owlCarousel({
             navText: false,
         },
         992: {
-            items: 3,
+            items: 4,
             stagePadding: 0,
             nav: false,
             navText: false,
